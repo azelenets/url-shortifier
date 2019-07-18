@@ -21,6 +21,8 @@ require 'sprockets/railtie'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+require 'dotenv/load'
+
 module UrlShortifier
   # Main application class
   class Application < Rails::Application
@@ -41,5 +43,7 @@ module UrlShortifier
     )]
 
     config.exceptions_app = self.routes
+
+    config.cache_store = :redis_store, "#{ENV['REDIS_URL']}/0/cache"
   end
 end

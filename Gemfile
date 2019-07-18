@@ -7,9 +7,12 @@ ruby '2.6.3'
 
 gem 'attr_extras'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'dotenv-rails'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rails', '~> 6.0.0.rc1'
+gem 'redis-rack-cache'
+gem 'redis-rails'
 gem 'sass-rails', '~> 5'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'

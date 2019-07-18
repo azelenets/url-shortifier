@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.configure do
+  config.action_dispatch.rack_cache = {
+    metastore: "#{ENV['REDIS_URL']}/1/metastore",
+    entitystore: "#{ENV['REDIS_URL']}/1/entitystore"
+  }
+
   # Settings specified here will take precedence over those
   # in config/application.rb.
 
