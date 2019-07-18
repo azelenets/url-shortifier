@@ -17,10 +17,7 @@ class ShortcutUrlsController < ApplicationController
   end
 
   def show
-    redirect_to(root_url) unless params[:token]
-
-    @shortcut_url = ShortcutUrl.find_by!(token: params[:token])
-    redirect_to(@shortcut_url.redirect_to)
+    redirect_to(VisitShortcutUrlService.perform(params[:token]))
   end
 
   private

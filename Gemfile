@@ -16,6 +16,7 @@ gem 'webpacker', '~> 4.0'
 
 group :development, :test do
   gem 'pry'
+  gem 'rspec-rails', '~> 4.0.0.beta2'
 end
 
 group :development do
@@ -32,10 +33,14 @@ group :development do
 end
 
 group :test do
-  # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'faker', '~> 1.9.1'
+  gem 'rails-controller-testing'
   gem 'selenium-webdriver'
-  # Easy installation and use of web drivers to run system tests with browsers
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'simplecov', '~> 0.12.0'
   gem 'webdrivers'
 end
 
