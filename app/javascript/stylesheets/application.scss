@@ -1,1 +1,22 @@
 @import "~bootstrap/scss/bootstrap";
+
+body,html {
+  height: 100%;
+}
+
+.form-control-rounded {
+  border-radius: 2rem;
+}
+
+.short-url-link {
+  font-size: 3em;
+}
+
+.selina-logo {
+  margin-bottom: 3em;
+  height: 100px;
+}
+
+.shortcut-errors {
+  margin-bottom: 0;
+}

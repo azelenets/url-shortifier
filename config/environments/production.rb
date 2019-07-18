@@ -42,7 +42,7 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml
   # for options).
-  config.active_storage.service = :local
+  # config.active_storage.service = :local
 
   # Force all access to the app over SSL, use Strict-Transport-Security,
   # and use secure cookies.

@@ -1,0 +1,14 @@
+<h1>Your short URL:</h1>
+
+<%= link_to(
+        show_shortcut_url(@shortcut_url.token),
+        show_shortcut_url(@shortcut_url.token),
+        class: 'btn btn-link short-url-link',
+        target: '_blank'
+    ) %>
+
+<div>
+  <%= link_to(root_url, class: 'btn btn-primary btn-lg') do %>
+    <span class="glyphicon glyphicon-home"></span> Create another
+  <% end %>
+</div>

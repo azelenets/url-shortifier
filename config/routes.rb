@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   # https://guides.rubyonrails.org/routing.html
 
   root 'shortcut_urls#new'
-  get '/:token', to: 'shortcut_urls#show'
+
+  get '/404', to: 'errors#not_found'
+
+  post 'create-url', to: 'shortcut_urls#create', as: :create_shortcut
+  get '/:token', to: 'shortcut_urls#show', as: :show_shortcut
 end
