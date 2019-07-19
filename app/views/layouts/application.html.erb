@@ -6,10 +6,23 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container-fluid h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col col-sm-6 col-md-6 col-lg-6 col-xl-6 text-center">
+          <%= image_tag(
+                  'https://www.selina.com/static/media/selina_logo_black.b62a0982.svg',
+                  alt: 'Selina',
+                  class: 'rounded mx-auto d-block selina-logo'
+              ) %>
+
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
